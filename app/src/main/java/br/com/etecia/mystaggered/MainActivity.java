@@ -16,8 +16,9 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
 
     ArrayList images = new ArrayList<>(Arrays.asList(
-
-    ));
+            R.drawable.imgum, R.drawable.imgdois, R.drawable.imgtres, R.drawable.imgquatro,
+            R.drawable.imgcinco, R.drawable.imgseis, R.drawable.imgsete, R.drawable.imgoito,
+            R.drawable.imgnove, R.drawable.imgdez));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,5 +31,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(staggeredGridLayoutManager);
 
         Adapter adapter = new Adapter(images, MainActivity.this);
+
+        recyclerView.setAdapter(adapter);
     }
 }
